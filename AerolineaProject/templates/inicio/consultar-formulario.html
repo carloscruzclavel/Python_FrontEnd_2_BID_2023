@@ -1,0 +1,32 @@
+{% extends 'layout/base_bootstrap.html'%}
+
+
+{% block titulo %}
+    Datos
+{% endblock titulo %}
+    
+
+{% block content %}
+    <h1>Formulario</h1>
+    
+
+    <form>
+        <div>
+            <label>UserID:</label>
+            <input class="form-control"type="text" name="text" value="{{ formulario.userId }}">
+        </div>
+        <div>
+            <label>ID:</label>
+            <input class="form-control"type="text" name="text" value="{{ formulario.id }}">
+        </div>
+        <div>
+            <label>Titulo:</label>
+            <textarea class="form-control" name="text" >{{ formulario.title }}</textarea>
+        </div>
+        <div>
+            <label>Body:</label>
+            <textarea class="form-control" name="text" cols="30" rows="6">{{ formulario.body }}</textarea>
+        </div>
+
+    </form>
+{% endblock content %}

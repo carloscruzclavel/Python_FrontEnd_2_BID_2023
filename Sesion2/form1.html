@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <h1>Reigstrarse</h1>
+<fieldset>
+    <legend>Este es mi formulario</legend>
+        <form action="procesar.html" method="get" enctype="multipart/form-data">
+
+        <div>
+            <label for="usuario">Correo:</label>
+            <input type="email" name="usuario" id="usuario" placeholder="Digite su correo">    
+        </div>
+        <div>
+            <label for="clave">Contraseña:</label>
+            <input type="password" name="clave" id="clave" placeholder="Digite su clave">
+        </div>
+        <div>
+            <label for="clave">Confirmar contraseña:</label>
+            <input type="password" name="clave" id="clave" placeholder="Digite su clave">
+        </div>
+        <div>
+            <label for="clave">Subir fotografia:</label>
+            <input type="file" name="foto" id="foto" accept=".png,.jpg">
+        </div>
+        <div>
+            <label for="clave">Genero:</label>
+            <input type="radio" name="genero" id="genero_m" value="M">Masculino
+            <input type="radio" name="genero" id="genero_f" value="F" checked>Femenino
+        </div>
+        <div>
+            <label for="pais">Pais:</label>
+            <Select name="pais" id="pais">
+                <option value="sv">El Salvador</option>
+                <option value="us">Estados Unidos</option>
+                <option value="rk">Reino Unido</option>
+            </Select>
+        </div>
+        <div>
+            <label for="hobby">Hobby:</label>
+            <input type="checkbox" name="hobby" id="hobby_1" value="1"> Basketball
+            <input type="checkbox" name="hobby" id="hobby_2" value="2"> Fútbol
+            <input type="checkbox" name="hobby" id="hobby_3" value="3"> Hiking
+        </div>
+        <div>
+            <label for="direccion">Dirección:</label>
+            <textarea name="direccion" id="direccion" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha">
+        </div>
+        <div>
+            <label for="calificacion">Calificación:</label>
+            <input type="range" name="calif" id="calif" max="5" min="1" value="0" list="valores" 
+            oninput="document.getElementById('valor_calif').value=this.value">
+            <input type="text" name="valor_calif" id="valor_calif" size="1" value="1">
+            <datalist id="valores">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </datalist>
+        </div>
+        <input type="submit" value="Login">
+        </form>
+
+</fieldset>
+    
+</body>
+</html>

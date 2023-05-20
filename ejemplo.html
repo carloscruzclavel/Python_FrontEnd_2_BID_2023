@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // Definimos la clase Libro
+class Libro {
+    constructor(titulo, autor, isbn) {
+      this.titulo = titulo;
+      this.autor = autor;
+      this.isbn = isbn;
+    }
+  }
+  
+  // Definimos la clase Libreria
+  class Libreria {
+    constructor() {
+      this.libros = [];
+    }
+  
+    // Método para añadir libros a la lista
+    añadirLibro(libro) {
+      this.libros.push(libro);
+    }
+  
+    // Método para buscar libros por título
+    buscarPorTitulo(titulo) {
+      return this.libros.filter(libro => libro.titulo === titulo);
+    }
+  
+    // Método para buscar libros por autor
+    buscarPorAutor(autor) {
+      return this.libros.filter(libro => libro.autor === autor);
+    }
+  
+    // Método para buscar libros por ISBN
+    buscarPorISBN(isbn) {
+      return this.libros.find(libro => libro.isbn === isbn);
+    }
+  }
+  
+  // Creamos una instancia de la clase Libreria
+  const miLibreria = new Libreria();
+  
+  // Añadimos algunos libros a la lista
+  miLibreria.añadirLibro(new Libro("El Quijote", "Miguel de Cervantes", "978-8497941675"));
+  miLibreria.añadirLibro(new Libro("La Odisea", "Homero", "978-8420665380"));
+  miLibreria.añadirLibro(new Libro("Cien años de soledad", "Gabriel García Márquez", "978-8466346817"));
+  
+  // Buscamos un libro por título
+  console.log(miLibreria.buscarPorTitulo("El Quijote"));
+  
+  // Buscamos un libro por autor
+  console.log(miLibreria.buscarPorAutor("Homero"));
+  
+  // Buscamos un libro por ISBN
+  console.log(miLibreria.buscarPorISBN("978-8466346817"));
+  </script>
+  
+</body>
+</html>
+

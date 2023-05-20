@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <div class="principal">
+        <div class="uno">
+            <h2>Listas no ordenadas</h2>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ul>
+            <ul>
+                <li class="cir">Elemento 1</li>
+                <li class="cir">Elemento 2</li>
+                <li class="cir">Elemento 3</li>
+                <li class="cir">Elemento 4</li>
+            </ul>
+            <ul>
+                <li class="cuad">Elemento 1</li>
+                <li class="cuad">Elemento 2</li>
+                <li class="cuad">Elemento 3</li>
+                <li class="cuad">Elemento 4</li>
+            </ul>
+        </div>
+        <div class="dos">
+
+            <h2>Listas ordenadas</h2>
+
+            <ol type="a" start="4">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ol>
+            <ol type="1" start="100" reversed>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ol>
+            <ol type="i" start="999">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ol>
+
+        </div>
+        <div class="tres">
+            <ul>
+                <li>Nadadores</li>
+                <li>Ciclistas</li>
+                <li>Atletas</li>
+                <li>Futbolistas</li>
+                <ul>
+                    <li>Messi</li>
+                    <li>Cr7</li>
+                    <li>Joao</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+        div.uno{
+            width: 25%;
+        }
+
+        div.dos{
+            width: 25%;
+            padding-left: 25px;
+        }
+
+        div.tres{
+            width: 25%;
+        }
+
+        li.cir{
+            list-style-type: circle;
+        }
+
+        li.cuad{
+            list-style-type: square;
+        }
+
+        div.principal{
+            width: 100%;
+            display: flex;
+        }
+
+    </style>
+</body>
+</html>
